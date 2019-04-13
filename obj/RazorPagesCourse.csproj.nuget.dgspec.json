@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\RazorPagesCourse\\RazorPagesCourse.csproj": {}
+    "C:\\git\\RazorPagesCourse1\\RazorPagesCourse.csproj": {}
   },
   "projects": {
-    "C:\\git\\RazorPagesCourse\\RazorPagesCourse.csproj": {
+    "C:\\git\\RazorPagesCourse1\\RazorPagesCourse.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\RazorPagesCourse\\RazorPagesCourse.csproj",
+        "projectUniqueName": "C:\\git\\RazorPagesCourse1\\RazorPagesCourse.csproj",
         "projectName": "RazorPagesCourse",
-        "projectPath": "C:\\git\\RazorPagesCourse\\RazorPagesCourse.csproj",
+        "projectPath": "C:\\git\\RazorPagesCourse1\\RazorPagesCourse.csproj",
         "packagesPath": "C:\\Users\\zhurt\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\RazorPagesCourse\\obj\\",
+        "outputPath": "C:\\git\\RazorPagesCourse1\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
