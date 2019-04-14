@@ -9,8 +9,6 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using CoursesManagement.Models;
-using Microsoft.EntityFrameworkCore;
 
 namespace CoursesManagement
 {
@@ -33,8 +31,7 @@ namespace CoursesManagement
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<RazorPagesCourseContext>(options =>
-            options.UseSqlite(Configuration.GetConnectionString("CourseContext")));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
