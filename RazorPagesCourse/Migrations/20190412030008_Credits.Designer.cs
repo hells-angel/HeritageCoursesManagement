@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using RazorPagesCourse.Models;
 
 namespace RazorPagesCourse.Migrations
 {
     [DbContext(typeof(RazorPagesCourseContext))]
-    partial class RazorPagesCourseContextModelSnapshot : ModelSnapshot
+    [Migration("20190412030008_Credits")]
+    partial class Credits
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,7 +23,7 @@ namespace RazorPagesCourse.Migrations
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<double>("Credits");
+                    b.Property<decimal>("Credits");
 
                     b.Property<DateTime>("Date");
 
@@ -31,9 +33,7 @@ namespace RazorPagesCourse.Migrations
 
                     b.Property<string>("Semester");
 
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(60);
+                    b.Property<string>("Title");
 
                     b.HasKey("ID");
 

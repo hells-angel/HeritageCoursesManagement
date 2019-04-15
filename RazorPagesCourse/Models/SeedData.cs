@@ -3,6 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 
+
 namespace RazorPagesCourse.Models
 {
     public static class SeedData
@@ -13,7 +14,7 @@ namespace RazorPagesCourse.Models
                 serviceProvider.GetRequiredService<
                     DbContextOptions<RazorPagesCourseContext>>()))
             {
-                // Look for any movies.
+                // Look for any Courses.
                 if (context.Course.Any())
                 {
                     return;   // DB has been seeded
@@ -22,34 +23,32 @@ namespace RazorPagesCourse.Models
                 context.Course.AddRange(
                     new Course
                     {
-                        Title = "When Harry Met Sally",
-                        Description = "hsey",
-                        Length = 1,
-                        Credit = 20
+                        Number = "1-W-3",
+                        Title = "PHP",
+                        Date = DateTime.Parse("2019-2-12"),
+                        Semester = "2019-W",
+                        Description = "nan",
+                        Credits = 3.2
+
                     },
 
                     new Course
                     {
-                        Title = "When lly",
-                        Description = "shey",
-                        Length = 1,
-                        Credit = 20
+                        Number = "1-W-4",
+                        Title = "jsp",
+                        Date = DateTime.Parse("2019-2-12"),
+                        Semester = "2019-W",
+                        Description = "nan",
+                        Credits = 2.2
                     },
-
                     new Course
                     {
-                        Title = "When  Sally",
-                        Description = "hedy",
-                        Length = 1,
-                        Credit = 20
-                    },
-
-                    new Course
-                    {
-                        Title = "Harry Met Sally",
-                        Description = "hfey",
-                        Length = 1,
-                        Credit = 20
+                        Number = "1-W-4",
+                        Title = "web design",
+                        Date = DateTime.Parse("2019-2-12"),
+                        Semester = "2019-W",
+                        Description = "nan",
+                        Credits = 2.2
                     }
                 );
                 context.SaveChanges();

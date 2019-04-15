@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace RazorPagesCourse.Migrations
 {
@@ -12,10 +13,11 @@ namespace RazorPagesCourse.Migrations
                 {
                     ID = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
+                    Number = table.Column<string>(nullable: true),
                     Title = table.Column<string>(nullable: true),
-                    Description = table.Column<string>(nullable: true),
-                    Length = table.Column<int>(nullable: false),
-                    Credit = table.Column<decimal>(nullable: false)
+                    Date = table.Column<DateTime>(nullable: false),
+                    Semester = table.Column<string>(nullable: true),
+                    Description = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {

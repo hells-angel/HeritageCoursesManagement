@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore;
+﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
+using Microsoft.EntityFrameworkCore;
 using RazorPagesCourse.Models;
 
 namespace RazorPagesCourse
 {
+
     public class Program
     {
         public static void Main(string[] args)
@@ -25,7 +21,7 @@ namespace RazorPagesCourse
 
                 try
                 {
-                    var context=services.
+                    var context = services.
                         GetRequiredService<RazorPagesCourseContext>();
                     context.Database.Migrate();
                     SeedData.Initialize(services);
@@ -39,8 +35,6 @@ namespace RazorPagesCourse
 
             host.Run();
         }
-
-
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)

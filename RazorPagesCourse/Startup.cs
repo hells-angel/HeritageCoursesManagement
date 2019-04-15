@@ -12,8 +12,6 @@ using Microsoft.Extensions.DependencyInjection;
 using RazorPagesCourse.Models;
 using Microsoft.EntityFrameworkCore;
 
-// Microsoft.EntityFrameworkCore.Sqlite;
-
 namespace RazorPagesCourse
 {
     public class Startup
@@ -30,16 +28,16 @@ namespace RazorPagesCourse
         {
             services.Configure<CookiePolicyOptions>(options =>
             {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
+                // This lambda determines whether user consent for 
+                // non-essential cookies is needed for a given request.
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
             services.AddDbContext<RazorPagesCourseContext>(options =>
-       options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
+                options.UseSqlite(Configuration.GetConnectionString("CourseContext")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
