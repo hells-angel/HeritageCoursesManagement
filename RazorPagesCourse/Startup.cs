@@ -9,6 +9,10 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using RazorPagesCourse.Models;
+using Microsoft.EntityFrameworkCore;
+
+// Microsoft.EntityFrameworkCore.Sqlite;
 
 namespace RazorPagesCourse
 {
@@ -31,8 +35,11 @@ namespace RazorPagesCourse
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
+            services.AddDbContext<RazorPagesCourseContext>(options =>
+       options.UseSqlite(Configuration.GetConnectionString("MovieContext")));
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
