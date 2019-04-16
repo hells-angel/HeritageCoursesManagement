@@ -48,6 +48,11 @@ html {
   min-height: 100%;
 }
 
+p {
+  text-align: justify;
+}
+
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
