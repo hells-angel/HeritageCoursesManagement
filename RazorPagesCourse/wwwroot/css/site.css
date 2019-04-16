@@ -66,16 +66,15 @@ body {
 }
 
 td:hover {
-  word-wrap: break-word;
-  word-break: break-all;
-  width: 20%;
-  overflow: visible;
-  white-space: normal;
-
-  background-color: #e93eff;
-  transition-property: background-color, height;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 20%;
+    overflow: visible;
+    white-space: normal;
+    background-color: #d5eadb;
+    transition-property: background-color, height;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
 }
 
 td {
@@ -119,7 +118,7 @@ th {
   padding: 5px 10px;
   font-size: 12px;
   font-family: Verdana;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 a {
